@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Tomatoes from './Components/Tomatoes'
 
-function App() {
+const App = () => {
+
+  let imgURL = "https://imgur.com/MOTo1WI.png";
+  let img2URL = "https://imgur.com/CyTIsPh.png";
+  const array = [imgURL, img2URL, imgURL]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and saved to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     {array.map(element => <Tomatoes element={element}/>)}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
+
